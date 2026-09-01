@@ -1,0 +1,5 @@
+_build/
+.ipynb_checkpoints/
+*.bak
+node_modules/
+.venv310/
