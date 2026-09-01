@@ -1,0 +1,23 @@
+version: 1
+project:
+  title: Algebra lineal interactiva
+  authors:
+    - name: Carlos Cuenca
+  github: executablebooks/jupyter-book
+  bibliography:
+    - references.bib
+  exports:
+    - format: pdf
+      template: plain_latex_book
+      output: exports/book.pdf
+  toc:
+    - file: intro.md
+    - file: markdown.md
+    - file: notebooks.ipynb
+    - file: markdown-notebooks.md
+    - file: I_Parcial_AL.ipynb
+site:
+  options:
+    logo: logo.png
+    folders: true
+  template: book-theme

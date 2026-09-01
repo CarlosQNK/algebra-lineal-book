@@ -1,0 +1,1337 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ÁLGEBRA LINEAL &#8212; Algebra lineal interactiva</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'I_Parcial_AL';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Algebra lineal interactiva - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Algebra lineal interactiva - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">ÁLGEBRA LINEAL</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FI_Parcial_AL.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/I_Parcial_AL.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ÁLGEBRA LINEAL</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-determinantes-sistemas-de-ecuaciones-lineales">Matrices, determinantes, sistemas de ecuaciones lineales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">Matrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definiciones-propiedades-clasificacion-de-matrices">Definiciones, propiedades, clasificación de matrices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion-de-matrices-cuadradas">Clasificación de matrices cuadradas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-matrices">Operaciones con matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suma">Suma</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resta">Resta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicacion-por-escalar">Multiplicación por escalar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-la-multiplicacion-de-un-escalar-por-una-matriz">Propiedades de la multiplicación de un escalar por una matriz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicacion-matricial">Multiplicación matricial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#premultiplicacion-y-postmultiplicacion-de-matrices">Premultiplicación y Postmultiplicación de matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-la-multiplicacion-matricial">Propiedades de la multiplicación matricial</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span><span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="kn">import</span> <span class="n">Matrix</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section class="tex2jax_ignore mathjax_ignore" id="algebra-lineal">
+<h1>ÁLGEBRA LINEAL<a class="headerlink" href="#algebra-lineal" title="Link to this heading">#</a></h1>
+<section id="matrices-determinantes-sistemas-de-ecuaciones-lineales">
+<h2>Matrices, determinantes, sistemas de ecuaciones lineales<a class="headerlink" href="#matrices-determinantes-sistemas-de-ecuaciones-lineales" title="Link to this heading">#</a></h2>
+<section id="matrices">
+<h3>Matrices<a class="headerlink" href="#matrices" title="Link to this heading">#</a></h3>
+<section id="definiciones-propiedades-clasificacion-de-matrices">
+<h4>Definiciones, propiedades, clasificación de matrices<a class="headerlink" href="#definiciones-propiedades-clasificacion-de-matrices" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#from google.colab import files</span>
+<span class="c1">#uploaded = files.upload()</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;Abrir The-Art-of-Linear-Algebra.png&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<a class="reference internal image-reference" href="_images/03776dd4cbee559c0cb69b9bf3c2b7d0b642b4c2c622df5d5920a069caf15528.png"><img alt="_images/03776dd4cbee559c0cb69b9bf3c2b7d0b642b4c2c622df5d5920a069caf15528.png" src="_images/03776dd4cbee559c0cb69b9bf3c2b7d0b642b4c2c622df5d5920a069caf15528.png" style="width: 700px;" />
+</a>
+</div>
+</div>
+<p><strong>Tipos de matrices</strong></p>
+<ul class="simple">
+<li><p><strong>Matriz fila o vector fila</strong> <span class="math notranslate nohighlight">\((1 \times n, \quad \forall n&gt;1)\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+A = \begin{bmatrix}
+1&amp;2&amp;3 
+\end{bmatrix}
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]])</span>
+<span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left[\begin{matrix}1 &amp; 2 &amp; 3\end{matrix}\right]\]</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Matriz columna o vector columna</strong>  <span class="math notranslate nohighlight">\((m \times 1, \quad \forall m&gt;1)\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}1\\2\\3 \end{bmatrix}\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>Matriz rectangular</strong> (número de filas <span class="math notranslate nohighlight">\(\neq\)</span>número de columnas)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}1&amp;2&amp;3\\4&amp;5&amp;6 \end{bmatrix} \qquad
+B=\begin{bmatrix}
+1 &amp; 2 \\
+3 &amp; 4 \\
+5 &amp; 6
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>Matriz cuadrada</strong> <span class="math notranslate nohighlight">\((m=n)\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{bmatrix}\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>Matriz singleton (Matriz de un solo elemento no nulo)</strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[A=\begin{bmatrix}
+a
+\end{bmatrix}\quad \forall a \neq 0
+\]</div>
+<ul class="simple">
+<li><p><strong>Matriz Horizontal <span class="math notranslate nohighlight">\((m&lt;n)\)</span></strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; 4\\
+5 &amp; 6 &amp; 7 &amp; 8
+\end{bmatrix}\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>Matriz vertical <span class="math notranslate nohighlight">\((m&gt;n)\)</span></strong></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\begin{bmatrix}
+1 &amp; 2 \\
+3 &amp; 4 \\
+5 &amp; 6
+\end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p><strong>Submatriz:</strong> Es una matriz que se obtiene quitando cualquier número de filas o columnas.<br />
+Sea: <span class="math notranslate nohighlight">\(
+A = \begin{bmatrix}
+1 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 6 \\
+7 &amp; 8 &amp; 9
+\end{bmatrix}
+\Rightarrow \text{Submatriz de A:} \begin{bmatrix}
+1 &amp; 2 \\
+4 &amp; 5
+\end{bmatrix}
+\)</span></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="clasificacion-de-matrices-cuadradas">
+<h2>Clasificación de matrices cuadradas<a class="headerlink" href="#clasificacion-de-matrices-cuadradas" title="Link to this heading">#</a></h2>
+<p><strong>Triangular Superior</strong>: Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> cuyos elementos de por debajo de la diagonal principal son iguales a <span class="math notranslate nohighlight">\(0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+11&amp;5&amp;-2\\
+{\color{blue}0}&amp;4&amp;12\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;-7
+\end{pmatrix}\qquad
+\begin{pmatrix}
+4&amp;-1\\
+{\color{blue}0}&amp;23
+\end{pmatrix}\qquad
+\begin{pmatrix}
+-9&amp;4&amp;5&amp;2\\
+{\color{blue}0}&amp;1&amp;6&amp;-7\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;13&amp;-1\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}&amp;4
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Triangular Inferior:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> cuyos elementos de por encima de la diagonal principal son iguales a <span class="math notranslate nohighlight">\(0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+2&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+3&amp;6&amp;{\color{blue}0}\\
+7&amp;-7&amp;12
+\end{pmatrix}\qquad
+\begin{pmatrix}
+4&amp;{\color{blue}0}\\
+-1&amp;23
+\end{pmatrix}\qquad
+\begin{pmatrix}
+6&amp; {\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+-3&amp;4&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+1&amp;-4&amp;12&amp;{\color{blue}0}\\
+2&amp;8&amp;5&amp;4
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Diagonal:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> cuyos elementos por encima y debajo de la diagonal principal son iguales a <span class="math notranslate nohighlight">\(0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+11&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;4&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;-7
+\end{pmatrix}\qquad
+\begin{pmatrix}
+4&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;23
+\end{pmatrix}\qquad
+\begin{pmatrix}
+-9&amp;{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;1&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;13&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}&amp;4
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Escalar:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> cuyos elementos de la diagonal principal son iguales y el resto son <span class="math notranslate nohighlight">\(0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+11&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;11&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;11
+\end{pmatrix}\qquad
+\begin{pmatrix}
+4&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;4
+\end{pmatrix}\qquad
+\begin{pmatrix}
+-9&amp;{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;-9&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;-9&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}&amp;-9
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Identidad:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> cuyos elementos de la diagonal principal son <span class="math notranslate nohighlight">\(1\)</span> y el resto son <span class="math notranslate nohighlight">\(0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+1&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;1&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;1
+\end{pmatrix}\qquad
+\begin{pmatrix}
+1&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;1
+\end{pmatrix}\qquad
+\begin{pmatrix}
+1&amp;{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;1&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;1&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}&amp;1
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Nula o matriz cero:</strong> Matriz que no necesariamente es de orden <span class="math notranslate nohighlight">\(n\)</span> y todos sus elementos son <span class="math notranslate nohighlight">\(0\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp; {\color{blue}0}
+\end{pmatrix} \qquad
+\begin{pmatrix}
+{\color{blue}0}\\
+{\color{blue}0}
+\end{pmatrix}\qquad
+\begin{pmatrix}
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}\\
+{\color{blue}0}&amp;{\color{blue}0}&amp;{\color{blue}0}
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Simétrica:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> que es igual a su transpuesta o que cumple la condición <span class="math notranslate nohighlight">\(A=A^t\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+-3&amp;{\color{blue}2}&amp;{\color{red}6}\\
+{\color{blue}2}&amp;4&amp;{\color{green}-9}\\
+{\color{red}6}&amp;{\color{green}-9}&amp;7
+\end{pmatrix}\qquad
+\begin{pmatrix}
+2&amp;{\color{blue}8}\\
+{\color{blue}8}&amp;-1
+\end{pmatrix}\qquad
+\begin{pmatrix}
+14&amp;{\color{blue}-5}&amp;{\color{orange}0}&amp;{\color{gray}-1}\\
+{\color{blue}-5}&amp;-4&amp;{\color{magenta}7}&amp;{\color{cyan}{11}}\\
+{\color{orange}0}&amp;{\color{magenta}7}&amp;10&amp;{\color{brown}2}\\
+{\color{gray}-1}&amp;{\color{cyan}{11}}&amp;{\color{brown}2}&amp;6
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Antisimétrica:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> que es negativa respecto de su transpuesta</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{pmatrix}
+0&amp;-2&amp;6\\
+2&amp;0&amp;-9\\
+-6&amp;9&amp;0
+\end{pmatrix}\qquad
+\begin{pmatrix}
+0&amp;-8\\
+8&amp;0
+\end{pmatrix}\qquad
+\begin{pmatrix}
+0&amp;5&amp;0&amp;-1\\
+-5&amp;0&amp;-7&amp;11\\
+0&amp;7&amp;0&amp;-2\\
+1&amp;-11&amp;2&amp;0
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Compleja:</strong> Matriz que no necesariamente es de orden <span class="math notranslate nohighlight">\(n\)</span> cuyos elementos son números complejos</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P=\begin{pmatrix}
+1-i&amp;i&amp;-3+2i\\
+5+3i&amp;-6-4i&amp;7-9i\\
+-9+i&amp;8&amp;-6+15i
+\end{pmatrix} \qquad
+Q=\begin{pmatrix}
+2+i&amp;4i&amp;1-3i\\
+5-4i&amp;2+2i&amp;6
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Conjugada:</strong> Matriz que no necesariamente es de orden <span class="math notranslate nohighlight">\(n\)</span> y se construye a partir de una matriz compleja escribiendo el conjugado de todos sus elementos.<br />
+Con respecto a las matrices complejas <span class="math notranslate nohighlight">\(P\)</span> y <span class="math notranslate nohighlight">\(Q\)</span> del literal anterior</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\overline{P}=\begin{pmatrix}
+1+i&amp;-i&amp;-3-2i\\
+5-3i&amp;-6+4i&amp;7+9i\\
+-9-i&amp;8&amp;-6-15i
+\end{pmatrix} \qquad
+\overline{Q}=\begin{pmatrix}
+2-i&amp;-4i&amp;1+3i\\
+5+4i&amp;2-2i&amp;6
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Hermitiana:</strong> Matriz compleja de orden <span class="math notranslate nohighlight">\(n\)</span> cuya conjugada de la transpuesta es igual a la matriz original</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R=\begin{pmatrix}
+5&amp;3+2i\\
+3-2i&amp;7
+\end{pmatrix}\quad
+R^t=\begin{pmatrix}
+5&amp;3-2i\\
+3+2i&amp;7
+\end{pmatrix}\quad
+\overline{R^t}=\begin{pmatrix}
+5&amp;3+2i\\
+3-2i&amp;7\end{pmatrix}\end{split}\]</div>
+<p><strong>Antihermitiana:</strong> Matriz compleja de orden <span class="math notranslate nohighlight">\(n\)</span> cuyo negativo del conjugado de su transpuesta es igual a la matriz original</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S=\begin{pmatrix}
+2i&amp;3+2i\\
+-3+2i&amp;i
+\end{pmatrix}\quad S^t=\begin{pmatrix}
+2i&amp;-3+2i\\
+3+2i&amp;i
+\end{pmatrix}\quad \overline{S^t}= \begin{pmatrix}
+-2i&amp;-3-2i\\
+3-2i&amp;-i
+\end{pmatrix}
+\quad - \overline{S^t}= \begin{pmatrix}
+2i&amp;3+2i\\
+-3+2i&amp;i
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Periódica:</strong> Una matriz de orden <span class="math notranslate nohighlight">\(n\)</span> es periódica de período <span class="math notranslate nohighlight">\(p\)</span> si al elevar la matriz a la potencia <span class="math notranslate nohighlight">\(p+1\)</span> se obtiene la matriz original, es decir:</p>
+<p><span class="math notranslate nohighlight">\(A^{p+1}=A\)</span><br />
+<span class="math notranslate nohighlight">\(A=\begin{pmatrix}
+4&amp;-3&amp;-3\\
+5&amp;-4&amp;-4\\
+-1&amp;1&amp;0
+\end{pmatrix}\)</span> es de período <span class="math notranslate nohighlight">\(3\)</span> ya que: <span class="math notranslate nohighlight">\(A^4=\begin{pmatrix}
+4&amp;-3&amp;-3\\
+5&amp;-4&amp;-4\\
+-1&amp;1&amp;0
+\end{pmatrix}=A^{{\color{blue}3}+1}\)</span></p>
+<p><strong>Idempotente:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> que elevada al cuadrado se obtiene la misma matriz: <span class="math notranslate nohighlight">\(A^2=A\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A=\begin{pmatrix}
+-1&amp;2&amp;-6\\
+2&amp;-1&amp;6\\
+1&amp;-1&amp;4
+\end{pmatrix}\qquad
+A^2=\begin{pmatrix}
+-1&amp;2&amp;-6\\
+2&amp;-1&amp;6\\
+1&amp;-1&amp;4
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Nilpotente:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> que elevada al cuadrado se obtiene una matriz nula: <span class="math notranslate nohighlight">\(B^2=B\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B=\begin{pmatrix}
+0&amp;3\\
+0&amp;0
+\end{pmatrix}\qquad
+B^2=\begin{pmatrix}
+0&amp;0\\
+0&amp;0
+\end{pmatrix}\end{split}\]</div>
+<p><strong>Involutiva:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> que elevada al cuadrado se obtiene la matriz identidad: <span class="math notranslate nohighlight">\( M^2=I \)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M=\begin{pmatrix}
+-1&amp;-1&amp;-2\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1
+\end{pmatrix} \qquad M^2=\begin{pmatrix}
+1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1
+\end{pmatrix}\end{split}\]</div>
+<p>*El período de una matriz idempotente es 1</p>
+<p><strong>Ortogonal:</strong> Matriz de orden <span class="math notranslate nohighlight">\(n\)</span> que multiplicada por su transpuesta se obtiene la matriz identidad: <span class="math notranslate nohighlight">\(D\cdot D^t=I\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}D=\begin{pmatrix}
+1/\sqrt{3}&amp;1/\sqrt{6}&amp;-1/\sqrt{2}\\
+1/\sqrt{3}&amp;-2/\sqrt{6}&amp;0\\
+1/\sqrt{3}&amp;1/\sqrt{6}&amp;1/\sqrt{2}
+\end{pmatrix} \qquad D\cdot D^t=\begin{pmatrix}
+1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1
+\end{pmatrix}\end{split}\]</div>
+</section>
+<section id="operaciones-con-matrices">
+<h2>Operaciones con matrices<a class="headerlink" href="#operaciones-con-matrices" title="Link to this heading">#</a></h2>
+</section>
+<section id="suma">
+<h2>Suma<a class="headerlink" href="#suma" title="Link to this heading">#</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> dos matrices de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>. La suma de <span class="math notranslate nohighlight">\(A\)</span>+<span class="math notranslate nohighlight">\(B\)</span> es otra matriz de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span> y se obtiene sumando los elementos correspondientes de <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Sean dos matrices <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{pmatrix}
+\quad \text{y} \quad
+B = \begin{pmatrix}
+b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1n} \\
+b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+b_{m1} &amp; b_{m2} &amp; \cdots &amp; b_{mn}
+\end{pmatrix}
+\end{split}\]</div>
+<p>La suma de <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> es una matriz <span class="math notranslate nohighlight">\(C\)</span> de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>, donde cada elemento <span class="math notranslate nohighlight">\(c_{ij}\)</span> se obtiene sumando los elementos correspondientes de <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span>: <span class="math notranslate nohighlight">\(c_{ij} = a_{ij} + b_{ij}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C = A + B = \begin{pmatrix}
+a_{11} + b_{11} &amp; a_{12} + b_{12} &amp; \cdots &amp; a_{1n} + b_{1n} \\
+a_{21} + b_{21} &amp; a_{22} + b_{22} &amp; \cdots &amp; a_{2n} + b_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} + b_{m1} &amp; a_{m2} + b_{m2} &amp; \cdots &amp; a_{mn} + b_{mn}
+\end{pmatrix}
+\end{split}\]</div>
+<p><strong>Ejemplo:</strong></p>
+<p>Sea</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+1 &amp; 2 \\
+3 &amp; 4
+\end{pmatrix}
+\quad \text{y} \quad
+B = \begin{pmatrix}
+5 &amp; 6 \\
+7 &amp; 8
+\end{pmatrix}
+\end{split}\]</div>
+<p>Entonces</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A + B = \begin{pmatrix}
+1+5 &amp; 2+6 \\
+3+7 &amp; 4+8
+\end{pmatrix} = \begin{pmatrix}
+6 &amp; 8 \\
+10 &amp; 12
+\end{pmatrix}
+\end{split}\]</div>
+</section>
+<section id="resta">
+<h2>Resta<a class="headerlink" href="#resta" title="Link to this heading">#</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> dos matrices de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>. La resta de <span class="math notranslate nohighlight">\(A\)</span>-<span class="math notranslate nohighlight">\(B\)</span> es otra matriz de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span> y se obtiene restando los elementos correspondientes de <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Sean dos matrices <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{pmatrix}
+\quad \text{y} \quad
+B = \begin{pmatrix}
+b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1n} \\
+b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+b_{m1} &amp; b_{m2} &amp; \cdots &amp; b_{mn}
+\end{pmatrix}
+\end{split}\]</div>
+<p>La resta de <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> es una matriz <span class="math notranslate nohighlight">\(C\)</span> de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>, donde cada elemento <span class="math notranslate nohighlight">\(c_{ij}\)</span> se obtiene restando los elementos correspondientes de <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span>: <span class="math notranslate nohighlight">\(c_{ij} = a_{ij} - b_{ij}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C = A - B = \begin{pmatrix}
+a_{11} - b_{11} &amp; a_{12} - b_{12} &amp; \cdots &amp; a_{1n} - b_{1n} \\
+a_{21} - b_{21} &amp; a_{22} - b_{22} &amp; \cdots &amp; a_{2n} - b_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} - b_{m1} &amp; a_{m2} - b_{m2} &amp; \cdots &amp; a_{mn} - b_{mn}
+\end{pmatrix}
+\end{split}\]</div>
+<p><strong>Ejemplo:</strong></p>
+<p>Sea</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+1 &amp; 2 \\
+3 &amp; 4
+\end{pmatrix}
+\quad \text{y} \quad
+B = \begin{pmatrix}
+5 &amp; 6 \\
+7 &amp; 8
+\end{pmatrix}
+\end{split}\]</div>
+<p>Entonces</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A - B = \begin{pmatrix}
+1-5 &amp; 2-6 \\
+3-7 &amp; 4-8
+\end{pmatrix} = \begin{pmatrix}
+-4 &amp; -4 \\
+-4 &amp; -4
+\end{pmatrix}
+\end{split}\]</div>
+</section>
+<section id="multiplicacion-por-escalar">
+<h2>Multiplicación por escalar<a class="headerlink" href="#multiplicacion-por-escalar" title="Link to this heading">#</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(A\)</span> una matriz de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span> y <span class="math notranslate nohighlight">\(k\)</span> un escalar. La multiplicación de <span class="math notranslate nohighlight">\(A\)</span> por el escalar <span class="math notranslate nohighlight">\(k\)</span> es otra matriz de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span> y se obtiene multiplicando cada elemento de <span class="math notranslate nohighlight">\(A\)</span> por el escalar <span class="math notranslate nohighlight">\(k\)</span>.</p>
+<p>Sea una matriz <span class="math notranslate nohighlight">\(A\)</span> de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{pmatrix}
+\end{split}\]</div>
+<p>La multiplicación de <span class="math notranslate nohighlight">\(A\)</span> por el escalar <span class="math notranslate nohighlight">\(k\)</span> es una matriz <span class="math notranslate nohighlight">\(C\)</span> de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>, donde cada elemento <span class="math notranslate nohighlight">\(c_{ij}\)</span> se obtiene multiplicando el elemento correspondiente de <span class="math notranslate nohighlight">\(A\)</span> por <span class="math notranslate nohighlight">\(k\)</span>: <span class="math notranslate nohighlight">\(c_{ij} = k \cdot a_{ij}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C = k \cdot A = \begin{pmatrix}
+k \cdot a_{11} &amp; k \cdot a_{12} &amp; \cdots &amp; k \cdot a_{1n} \\
+k \cdot a_{21} &amp; k \cdot a_{22} &amp; \cdots &amp; k \cdot a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+k \cdot a_{m1} &amp; k \cdot a_{m2} &amp; \cdots &amp; k \cdot a_{mn}
+\end{pmatrix}
+\end{split}\]</div>
+<p><strong>Ejemplo:</strong></p>
+<p>Sea</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+1 &amp; 2 \\
+3 &amp; 4
+\end{pmatrix}
+\quad \text{y} \quad k = 5
+\end{split}\]</div>
+<p>Entonces</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+5 \cdot A = \begin{pmatrix}
+5 \cdot 1 &amp; 5 \cdot 2 \\
+5 \cdot 3 &amp; 5 \cdot 4
+\end{pmatrix} = \begin{pmatrix}
+5 &amp; 10 \\
+15 &amp; 20
+\end{pmatrix}
+\end{split}\]</div>
+</section>
+<section id="propiedades-de-la-multiplicacion-de-un-escalar-por-una-matriz">
+<h2>Propiedades de la multiplicación de un escalar por una matriz<a class="headerlink" href="#propiedades-de-la-multiplicacion-de-un-escalar-por-una-matriz" title="Link to this heading">#</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> dos matrices de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>, y sean <span class="math notranslate nohighlight">\(k_1\)</span> y <span class="math notranslate nohighlight">\(k_2\)</span> dos escalares. Las propiedades de la multiplicación de un escalar por una matriz son las siguientes:</p>
+<ol class="arabic">
+<li><p><strong>Propiedad conmutativa:</strong> El orden de la multiplicación no afecta el resultado.</p>
+<div class="math notranslate nohighlight">
+\[ k_1 \cdot A = A \cdot k_1 \]</div>
+</li>
+<li><p><strong>Propiedad asociativa:</strong> La asociación de escalares no afecta el resultado.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ k_1 \cdot (k_2 \cdot A) = (k_1 \cdot k_2) \cdot A \]</div>
+<ol class="arabic" start="5">
+<li><p><strong>Propiedad distributiva respecto a la suma de matrices:</strong> La multiplicación de un escalar por la suma de dos matrices es igual a la suma de la multiplicación del escalar por cada matriz.</p>
+<div class="math notranslate nohighlight">
+\[ k_1 \cdot (A + B) = k_1 \cdot A + k_1 \cdot B \]</div>
+</li>
+<li><p><strong>Propiedad distributiva respecto a la suma de escalares:</strong> La multiplicación de la suma de dos escalares por una matriz es igual a la suma de la multiplicación de cada escalar por la matriz.</p>
+<div class="math notranslate nohighlight">
+\[ (k_1 + k_2) \cdot A = k_1 \cdot A + k_2 \cdot A \]</div>
+</li>
+<li><p><strong>Elemento neutro (escalar 1):</strong> La multiplicación de la matriz por el escalar 1 deja la matriz sin cambios.</p>
+<div class="math notranslate nohighlight">
+\[ 1 \cdot A = A \]</div>
+</li>
+<li><p><strong>Elemento nulo (escalar 0):</strong> La multiplicación de la matriz por el escalar 0 resulta en una matriz nula del mismo tamaño.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ 0 \cdot A = \mathbf{0} \]</div>
+<p>donde <span class="math notranslate nohighlight">\(\mathbf{0}\)</span> es la matriz nula de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span>.</p>
+<ol class="arabic simple" start="13">
+<li><p><strong>Multiplicación por -1:</strong> La multiplicación de la matriz por el escalar -1 resulta en la matriz opuesta (negativa).</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ -1 \cdot A = -A \]</div>
+</section>
+<section id="multiplicacion-matricial">
+<h2>Multiplicación matricial<a class="headerlink" href="#multiplicacion-matricial" title="Link to this heading">#</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(A\)</span> una matriz de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span> y <span class="math notranslate nohighlight">\(B\)</span> una matriz de tamaño <span class="math notranslate nohighlight">\(n \times p\)</span>. La multiplicación de <span class="math notranslate nohighlight">\(A\)</span> por <span class="math notranslate nohighlight">\(B\)</span> es otra matriz <span class="math notranslate nohighlight">\(C\)</span> de tamaño <span class="math notranslate nohighlight">\(m \times p\)</span>, donde cada elemento <span class="math notranslate nohighlight">\(c_{ij}\)</span> se obtiene sumando los productos de los elementos de la fila <span class="math notranslate nohighlight">\(i\)</span> de <span class="math notranslate nohighlight">\(A\)</span> por los elementos correspondientes de la columna <span class="math notranslate nohighlight">\(j\)</span> de <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<ul class="simple">
+<li><p>El valor del elemento <span class="math notranslate nohighlight">\(c_{ij}\)</span> se puede entender como el producto punto de la <span class="math notranslate nohighlight">\(i\text{-ésima}\)</span> por la <span class="math notranslate nohighlight">\(j\text{-ésima}\)</span></p></li>
+</ul>
+<p>Sean dos matrices <span class="math notranslate nohighlight">\(A\)</span> de tamaño <span class="math notranslate nohighlight">\(m \times n\)</span> y <span class="math notranslate nohighlight">\(B\)</span> de tamaño <span class="math notranslate nohighlight">\(n \times p\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; \cdots &amp; a_{mn}
+\end{pmatrix}
+\quad \text{y} \quad
+B = \begin{pmatrix}
+b_{11} &amp; b_{12} &amp; \cdots &amp; b_{1p} \\
+b_{21} &amp; b_{22} &amp; \cdots &amp; b_{2p} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+b_{n1} &amp; b_{n2} &amp; \cdots &amp; b_{np}
+\end{pmatrix}
+\end{split}\]</div>
+<p>La multiplicación de <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> es una matriz <span class="math notranslate nohighlight">\(C\)</span> de tamaño <span class="math notranslate nohighlight">\(m \times p\)</span>, donde cada elemento <span class="math notranslate nohighlight">\(c_{ij}\)</span> se define como:</p>
+<div class="math notranslate nohighlight">
+\[
+c_{ij} = \sum_{k=1}^{n} a_{ik} b_{kj}
+\]</div>
+<p>Esto significa que para obtener el elemento en la fila <span class="math notranslate nohighlight">\(i\)</span> y columna <span class="math notranslate nohighlight">\(j\)</span> de la matriz resultante <span class="math notranslate nohighlight">\(C\)</span>, se multiplican los elementos de la fila <span class="math notranslate nohighlight">\(i\)</span> de <span class="math notranslate nohighlight">\(A\)</span> por los elementos correspondientes de la columna <span class="math notranslate nohighlight">\(j\)</span> de <span class="math notranslate nohighlight">\(B\)</span> y se suman los productos.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C = A \cdot B = \begin{pmatrix}
+c_{11} &amp; c_{12} &amp; \cdots &amp; c_{1p} \\
+c_{21} &amp; c_{22} &amp; \cdots &amp; c_{2p} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+c_{m1} &amp; c_{m2} &amp; \cdots &amp; c_{mp}
+\end{pmatrix}
+\end{split}\]</div>
+<p><strong>Ejemplo:</strong></p>
+<p>Sea</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+1 &amp; 2 \\
+3 &amp; 4
+\end{pmatrix}
+\quad \text{y} \quad
+B = \begin{pmatrix}
+5 &amp; 6 \\
+7 &amp; 8
+\end{pmatrix}
+\end{split}\]</div>
+<p>Entonces</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \cdot B = \begin{pmatrix}
+(1 \cdot 5 + 2 \cdot 7) &amp; (1 \cdot 6 + 2 \cdot 8) \\
+(3 \cdot 5 + 4 \cdot 7) &amp; (3 \cdot 6 + 4 \cdot 8)
+\end{pmatrix} = \begin{pmatrix}
+(5 + 14) &amp; (6 + 16) \\
+(15 + 28) &amp; (18 + 32)
+\end{pmatrix} = \begin{pmatrix}
+19 &amp; 22 \\
+43 &amp; 50
+\end{pmatrix}
+\end{split}\]</div>
+</section>
+<section id="premultiplicacion-y-postmultiplicacion-de-matrices">
+<h2>Premultiplicación y Postmultiplicación de matrices<a class="headerlink" href="#premultiplicacion-y-postmultiplicacion-de-matrices" title="Link to this heading">#</a></h2>
+<p>En la multiplicación de matrices <span class="math notranslate nohighlight">\(A \cdot B\)</span>, el orden de las matrices es importante ya que la multiplicación de matrices no es conmutativa en general (<span class="math notranslate nohighlight">\(A \cdot B \neq B \cdot A\)</span>).</p>
+<ul class="simple">
+<li><p><strong>Premultiplicación:</strong> Cuando multiplicamos una matriz <span class="math notranslate nohighlight">\(B\)</span> por la izquierda con una matriz <span class="math notranslate nohighlight">\(A\)</span> (es decir, <span class="math notranslate nohighlight">\(A \cdot B\)</span>), decimos que la matriz <span class="math notranslate nohighlight">\(B\)</span> es <strong>premultiplicada</strong> por <span class="math notranslate nohighlight">\(A\)</span>. La matriz <span class="math notranslate nohighlight">\(A\)</span> está a la izquierda en el producto.</p></li>
+<li><p><strong>Postmultiplicación:</strong> Cuando multiplicamos una matriz <span class="math notranslate nohighlight">\(A\)</span> por la derecha con una matriz <span class="math notranslate nohighlight">\(B\)</span> (es decir, <span class="math notranslate nohighlight">\(A \cdot B\)</span>), decimos que la matriz <span class="math notranslate nohighlight">\(A\)</span> es <strong>postmultiplicada</strong> por <span class="math notranslate nohighlight">\(B\)</span>. La matriz <span class="math notranslate nohighlight">\(B\)</span> está a la derecha en el producto.</p></li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<p>Sea</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+1 &amp; 2 \\
+3 &amp; 4
+\end{pmatrix}
+\quad \text{y} \quad
+B = \begin{pmatrix}
+5 &amp; 6 \\
+7 &amp; 8
+\end{pmatrix}
+\end{split}\]</div>
+<p>Si calculamos <span class="math notranslate nohighlight">\(A \cdot B\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \cdot B = \begin{pmatrix}
+1 &amp; 2 \\
+3 &amp; 4
+\end{pmatrix}
+\begin{pmatrix}
+5 &amp; 6 \\
+7 &amp; 8
+\end{pmatrix} = \begin{pmatrix}
+19 &amp; 22 \\
+43 &amp; 50
+\end{pmatrix}
+\end{split}\]</div>
+<p>Aquí, <span class="math notranslate nohighlight">\(B\)</span> es premultiplicada por <span class="math notranslate nohighlight">\(A\)</span>, y <span class="math notranslate nohighlight">\(A\)</span> es postmultiplicada por <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>Si calculamos <span class="math notranslate nohighlight">\(B \cdot A\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B \cdot A = \begin{pmatrix}
+5 &amp; 6 \\
+7 &amp; 8
+\end{pmatrix}
+\begin{pmatrix}
+1 &amp; 2 \\
+3 &amp; 4
+\end{pmatrix} = \begin{pmatrix}
+(5 \cdot 1 + 6 \cdot 3) &amp; (5 \cdot 2 + 6 \cdot 4) \\
+(7 \cdot 1 + 8 \cdot 3) &amp; (7 \cdot 2 + 8 \cdot 4)
+\end{pmatrix} = \begin{pmatrix}
+(5 + 18) &amp; (10 + 24) \\
+(7 + 24) &amp; (14 + 32)
+\end{pmatrix} = \begin{pmatrix}
+23 &amp; 34 \\
+31 &amp; 46
+\end{pmatrix}
+\end{split}\]</div>
+<p>Aquí, <span class="math notranslate nohighlight">\(A\)</span> es premultiplicada por <span class="math notranslate nohighlight">\(B\)</span>, y <span class="math notranslate nohighlight">\(B\)</span> es postmultiplicada por <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Como se puede observar, <span class="math notranslate nohighlight">\(A \cdot B \neq B \cdot A\)</span>, lo que ilustra la importancia del orden en la multiplicación de matrices y el concepto de premultiplicación y postmultiplicación.</p>
+</section>
+<section id="propiedades-de-la-multiplicacion-matricial">
+<h2>Propiedades de la multiplicación matricial<a class="headerlink" href="#propiedades-de-la-multiplicacion-matricial" title="Link to this heading">#</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, y <span class="math notranslate nohighlight">\(C\)</span> matrices con tamaños compatibles para las operaciones indicadas, y sea <span class="math notranslate nohighlight">\(k\)</span> un escalar. Las propiedades de la multiplicación matricial son las siguientes:</p>
+<ol class="arabic">
+<li><p><strong>Propiedad asociativa:</strong> La asociación de matrices no afecta el resultado.</p>
+<div class="math notranslate nohighlight">
+\[ (A \cdot B) \cdot C = A \cdot (B \cdot C) \]</div>
+</li>
+<li><p><strong>Propiedad distributiva respecto a la suma por la izquierda:</strong> La multiplicación de una suma de matrices por una matriz a la izquierda es igual a la suma de las multiplicaciones.</p>
+<div class="math notranslate nohighlight">
+\[ A \cdot (B + C) = A \cdot B + A \cdot C \]</div>
+</li>
+<li><p><strong>Propiedad distributiva respecto a la suma por la derecha:</strong> La multiplicación de una matriz por una suma de matrices a la derecha es igual a la suma de las multiplicaciones.</p>
+<div class="math notranslate nohighlight">
+\[ (A + B) \cdot C = A \cdot C + B \cdot C \]</div>
+</li>
+<li><p><strong>Multiplicación por un escalar:</strong> Un escalar puede asociarse con cualquiera de las matrices en la multiplicación.</p>
+<div class="math notranslate nohighlight">
+\[ k \cdot (A \cdot B) = (k \cdot A) \cdot B = A \cdot (k \cdot B) \]</div>
+</li>
+<li><p><strong>Elemento neutro (matriz identidad):</strong> La multiplicación por la matriz identidad <span class="math notranslate nohighlight">\(I\)</span> (de tamaño compatible) deja la matriz sin cambios.</p>
+<div class="math notranslate nohighlight">
+\[ A \cdot I = A \]</div>
+<div class="math notranslate nohighlight">
+\[ I \cdot A = A \]</div>
+</li>
+<li><p><strong>Elemento nulo (matriz cero):</strong> La multiplicación por la matriz nula <span class="math notranslate nohighlight">\(\mathbf{0}\)</span> (de tamaño compatible) resulta en una matriz nula.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ A \cdot \mathbf{0} = \mathbf{0} \]</div>
+<div class="math notranslate nohighlight">
+\[ \mathbf{0} \cdot A = \mathbf{0} \]</div>
+<p><strong>Nota importante:</strong> La multiplicación matricial generalmente <strong>no es conmutativa</strong>, es decir, en general <span class="math notranslate nohighlight">\(A \cdot B \neq B \cdot A\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">[[]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">[[]]</span>
+
+<span class="ne">TypeError</span>: type &#39;MutableDenseMatrix&#39; is not subscriptable
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">Matrix</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1\\1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0\\0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0\\1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">**</span><span class="mi">23</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}6600550190 &amp; 5799652808 &amp; 5329727421 &amp; 2606173605 &amp; 3058701723 &amp; 2011434223 &amp; 4404016043\\5799652808 &amp; 5095632808 &amp; 4682435686 &amp; 2289853866 &amp; 2687090090 &amp; 1767376126 &amp; 3869135070\\5329727421 &amp; 4682435686 &amp; 4301160360 &amp; 2104626213 &amp; 2468528856 &amp; 1623733963 &amp; 3554251701\\2606173605 &amp; 2289853866 &amp; 2104626213 &amp; 1028866852 &amp; 1207669571 &amp; 794344720 &amp; 1739011994\\3058701723 &amp; 2687090090 &amp; 2468528856 &amp; 1207669571 &amp; 1416567112 &amp; 931989469 &amp; 2039798355\\2011434223 &amp; 1767376126 &amp; 1623733963 &amp; 794344720 &amp; 931989469 &amp; 612802460 &amp; 1341775770\\4404016043 &amp; 3869135070 &amp; 3554251701 &amp; 1739011994 &amp; 2039798355 &amp; 1341775770 &amp; 2937017872\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">**</span><span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}2 &amp; 0 &amp; 1 &amp; 0\\1 &amp; 2 &amp; 0 &amp; 0\\0 &amp; 0 &amp; 1 &amp; 1\\0 &amp; 1 &amp; 1 &amp; 1\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">**</span><span class="mi">4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}1 &amp; 2 &amp; 0 &amp; 0\\0 &amp; 1 &amp; 2 &amp; 2\\2 &amp; 0 &amp; 1 &amp; 0\\2 &amp; 0 &amp; 2 &amp; 1\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">**</span><span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \left[\begin{matrix}0 &amp; 1 &amp; 2 &amp; 2\\4 &amp; 0 &amp; 3 &amp; 1\\1 &amp; 2 &amp; 0 &amp; 0\\3 &amp; 2 &amp; 1 &amp; 0\end{matrix}\right]\end{split}\]</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="markdown-notebooks.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices-determinantes-sistemas-de-ecuaciones-lineales">Matrices, determinantes, sistemas de ecuaciones lineales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matrices">Matrices</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definiciones-propiedades-clasificacion-de-matrices">Definiciones, propiedades, clasificación de matrices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#clasificacion-de-matrices-cuadradas">Clasificación de matrices cuadradas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-matrices">Operaciones con matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suma">Suma</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resta">Resta</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicacion-por-escalar">Multiplicación por escalar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-la-multiplicacion-de-un-escalar-por-una-matriz">Propiedades de la multiplicación de un escalar por una matriz</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiplicacion-matricial">Multiplicación matricial</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#premultiplicacion-y-postmultiplicacion-de-matrices">Premultiplicación y Postmultiplicación de matrices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-la-multiplicacion-matricial">Propiedades de la multiplicación matricial</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Carlos Cuenca
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
