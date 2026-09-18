@@ -16,6 +16,7 @@ project:
     - file: notebooks.ipynb
     - file: markdown-notebooks.md
     - file: I_Parcial_AL.ipynb
+    - file: II_Parcial_AL.ipynb
 site:
   options:
     logo: logo.png
