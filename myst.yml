@@ -3,7 +3,7 @@ project:
   title: Algebra lineal interactiva
   authors:
     - name: Carlos Cuenca
-  github: executablebooks/jupyter-book
+  github: CarlosQNK/algebra-lineal-book
   bibliography:
     - references.bib
   exports:
@@ -16,7 +16,7 @@ project:
     - file: notebooks.ipynb
     - file: markdown-notebooks.md
     - file: I_Parcial_AL.ipynb
-    - file: II_Parcial_AL.ipynb
+    - file: 1_2_operaciones_elementales_fila.ipynb
 site:
   options:
     logo: logo.png
